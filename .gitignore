@@ -1,0 +1,9 @@
+*.off
+*.zip
+Build/
+Libs/
+Data/
+CMakeFiles
+*.cmake
+CMakeCache.txt
+old*
