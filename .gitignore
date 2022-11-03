@@ -7,3 +7,4 @@ CMakeFiles
 *.cmake
 CMakeCache.txt
 old*
+Makefile
