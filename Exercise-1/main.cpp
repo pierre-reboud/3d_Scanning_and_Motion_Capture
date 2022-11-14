@@ -180,7 +180,7 @@ int main()
 			float z_prime = depthMap[idx];
 			Vector3f image_point = Vector3f(idx % sensor.GetDepthImageWidth(), idx / sensor.GetDepthImageHeight(), 1.0f) * z_prime;
 			Vector3f extrinsic_point = depthIntrinsicsInv*image_point;
-			Vector4f homogeneous_point = Vector4f(extrinsic_point[0], extrinsic_point[1], extrinsic_point[2], 0.0f);
+			Vector4f homogeneous_point = Vector4f(extrinsic_point[0], extrinsic_point[1], extrinsic_point[2], 1.0f);
 			Vector4f world_point = trajectoryInv*depthExtrinsicsInv*homogeneous_point;
 			world_point[3] = 1.0f;
 			vertices[idx].position = world_point;
